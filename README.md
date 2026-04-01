@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Capstone — Inventory & Invoice Management (Frontend)
 
 A React-based single-page application for managing products, invoices, and business analytics. Built as a capstone project.
@@ -72,3 +73,6 @@ src/
 | `npm run build` | Build for production         |
 | `npm run preview` | Preview production build   |
 | `npm run lint`  | Run ESLint                   |
+=======
+# inventory-frontend
+>>>>>>> 8bac34bf4965ea2091d5ccd01fbf9977b2ee7851
