@@ -1,0 +1,108 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  padding: 16px 24px 14px;
+  border-bottom: 1px solid #3a3b50;
+}
+
+.pageTitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.content {
+  padding: 20px 24px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 0 28px 28px;
+  max-width: 740px;
+}
+
+.tabRow {
+  padding-top: 20px;
+  margin-bottom: 0;
+}
+
+.activeTab {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #111827;
+  display: inline-block;
+}
+
+.divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.input {
+  height: 44px;
+  padding: 0 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #111827;
+  outline: none;
+  font-family: inherit;
+  background: #ffffff;
+  max-width: 480px;
+}
+
+.input:focus {
+  border-color: #6366f1;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+  max-width: 480px;
+}
+
+.saveBtn {
+  background: #111827;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 36px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.saveBtn:hover {
+  background: #1f2937;
+}

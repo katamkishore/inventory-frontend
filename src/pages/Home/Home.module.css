@@ -1,0 +1,230 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  background: #424457;
+}
+
+.header {
+  padding: 14px 24px;
+  background: #424457;
+  border-bottom: 1px solid #e2e8f0;
+  flex-shrink: 0;
+}
+
+.pageTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.02em;
+}
+
+.loading {
+  padding: 32px 24px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.content {
+  flex: 1;
+  padding: 16px 20px 24px;
+  overflow-y: auto;
+}
+
+/* Main grid: wide column + sidebar (matches reference layout) */
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 1fr minmax(240px, 280px);
+  gap: 16px;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.mainCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.sideCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px 22px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  border: 1px solid #f1f5f9;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 16px;
+}
+
+.chartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.chartHeader .cardTitle {
+  margin-bottom: 0;
+}
+
+.weeklyBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.weeklyBtn:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+/* Stats row (Sales / Purchase overview) */
+.statsRow {
+  display: flex;
+  gap: 0;
+}
+
+.statItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 6px;
+  border-right: 1px solid #f1f5f9;
+}
+
+.statItem:last-child {
+  border-right: none;
+}
+
+.iconBox {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.iconInner {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statValue {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px;
+}
+
+.statLabel {
+  font-size: 11px;
+  color: #64748b;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Summary cards (Inventory / Product) */
+.summaryRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.summaryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2px;
+}
+
+.summaryIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.summaryValue {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.summaryLabel {
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.45;
+  margin: 0;
+  font-weight: 500;
+}
+
+.summaryDivider {
+  width: 1px;
+  height: 64px;
+  background-color: #f1f5f9;
+}
+
+/* Top Products */
+.topProductsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.topProductItem span {
+  display: block;
+  padding: 12px 0;
+  font-size: 14px;
+  color: #334155;
+  font-weight: 500;
+}
+
+.productDivider {
+  height: 1px;
+  background-color: #f1f5f9;
+}
+
+@media (max-width: 1024px) {
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+  }
+}

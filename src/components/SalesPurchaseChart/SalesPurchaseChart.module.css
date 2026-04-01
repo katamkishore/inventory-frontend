@@ -1,0 +1,11 @@
+.wrap {
+  width: 100%;
+  min-height: 320px;
+  margin-top: 4px;
+}
+
+.legendLabel {
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 500;
+}

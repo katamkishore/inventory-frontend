@@ -1,0 +1,164 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  padding: 16px 24px 14px;
+  border-bottom: 1px solid #3a3b50;
+}
+
+.pageTitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Stat Cards */
+.statsRow {
+  display: flex;
+  gap: 16px;
+}
+
+.statCard {
+  flex: 1;
+  border-radius: 14px;
+  padding: 20px 22px;
+}
+
+.yellow { background: #fbbf24; }
+.teal   { background: #2dd4bf; }
+.pink   { background: #e879f9; }
+
+.statCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.statCardLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.statCardIcon {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.statCardValue {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.statCardChange {
+  font-size: 11.5px;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+/* Bottom row */
+.bottomRow {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+}
+
+.chartCard {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  min-width: 0;
+}
+
+.topCard {
+  width: 210px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 14px;
+}
+
+.chartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.weeklyBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #ffffff;
+  font-size: 12px;
+  color: #374151;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Top Products */
+.productList {
+  display: flex;
+  flex-direction: column;
+}
+
+.productRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.productName {
+  font-size: 13px;
+  color: #374151;
+}
+
+.productDivider {
+  height: 1px;
+  background: #f3f4f6;
+}
+
+/* Stars */
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.starFilled {
+  color: #f59e0b;
+  font-size: 14px;
+}
+
+.starEmpty {
+  color: #e5e7eb;
+  font-size: 14px;
+}

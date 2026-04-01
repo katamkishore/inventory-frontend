@@ -1,0 +1,641 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px 14px;
+  border-bottom: 1px solid #3a3b50;
+}
+
+.pageTitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #3a3b50;
+  border-radius: 20px;
+  padding: 7px 16px;
+  width: 220px;
+}
+
+.searchInput {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  color: #d1d5db;
+  width: 100%;
+}
+
+.searchInput::placeholder {
+  color: #9ca3af;
+}
+
+/* CONTENT */
+.content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px 22px;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 14px;
+}
+
+/* OVERALL */
+.overallRow {
+  display: flex;
+}
+
+.overallItem {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.overallDivider {
+  width: 1px;
+  background: #f3f4f6;
+}
+
+.overallLabel {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.overallVal {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.overallSub {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+/* TABLE */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table thead {
+  background: #e8eaf6;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.paid {
+  color: #2563eb;
+}
+
+.unpaid {
+  color: #d97706;
+}
+
+/* MENU */
+.menuCell {
+  position: relative;
+}
+
+.menuBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Paid invoice: View / Delete dropdown */
+.paidMenu {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 6px;
+  z-index: 20;
+  min-width: 192px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.paidMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  font-family: inherit;
+  text-align: left;
+}
+
+.paidMenuItem:hover {
+  background: #f3f4f6;
+}
+
+.paidMenuIconView,
+.paidMenuIconDelete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.paidMenuIconView {
+  background: #3b82f6;
+}
+
+.paidMenuIconDelete {
+  background: #f97316;
+}
+
+.statusPopup {
+  position: absolute;
+  right: 40px; /* Adjust according to dots button position so it sits perfectly to the left */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  font-weight: 500;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.statusPopup::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+  border-width: 6px 0 6px 6px;
+  border-style: solid;
+}
+
+.statusPopupUnpaid {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+.statusPopupUnpaid::after {
+  border-color: transparent transparent transparent #ef4444;
+}
+
+/* Cyan-green “paid” bar (matches receipt-check artwork) */
+.statusPopupPaid {
+  background-color: #00e6c8;
+  color: #0f172a;
+}
+.statusPopupPaid::after {
+  border-color: transparent transparent transparent #00e6c8;
+}
+
+.statusIconSquare {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.statusIconSquareUnpaidTone {
+  background-color: #ffffff;
+}
+
+.statusIconSquarePaidTone {
+  background-color: #00ffcc;
+}
+
+/* DELETE */
+.deletePopover {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  z-index: 25;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.deleteActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.confirmDelete {
+  background: black;
+  color: white;
+  padding: 6px 12px;
+}
+
+/* PAGINATION */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.pageInfo {
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748b;
+  flex: 1;
+  text-align: center;
+}
+
+.pageBtn {
+  padding: 8px 20px;
+  min-width: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  color: #374151;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.pageBtn:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+.pageBtn:active:not(:disabled) {
+  background: #f1f5f9;
+}
+
+.pageBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ========================= */
+/* INVOICE MODAL (template layout) */
+/* ========================= */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 24px;
+}
+
+.invoiceModal {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 14px;
+  max-width: calc(100vw - 48px);
+}
+
+/* White card — matches upload-style invoice */
+.invoicePaper {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 0;
+  width: min(640px, 100%);
+  max-height: 85vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.18), 0 12px 24px -8px rgba(0, 0, 0, 0.1);
+}
+
+.invoicePaper > .invoiceTitle,
+.invoicePaper > .invoiceTopRow,
+.invoicePaper > .invoiceBodyGrid,
+.invoicePaper > .paymentNote {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.invoicePaper > .invoiceTitle {
+  padding-top: 32px;
+}
+
+.invoicePaper > .paymentNote {
+  padding-bottom: 16px;
+}
+
+/* Floating circular actions — to the right of the card */
+.invoiceActions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+  padding-top: 8px;
+}
+
+.closeAction,
+.downloadAction,
+.printAction {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.closeAction {
+  background: #f97316;
+}
+
+.downloadAction {
+  background: #60a5fa;
+}
+
+.printAction {
+  background: #eab308;
+}
+
+.invoiceTitle {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #0f172a;
+  margin: 0 0 24px;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.invoiceTopRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.billedLabel {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-bottom: 4px;
+}
+
+.billedName {
+  font-weight: 700;
+  font-size: 14px;
+  color: #111827;
+  margin: 0 0 6px;
+}
+
+.billedAddr {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0 0 4px;
+  line-height: 1.45;
+}
+
+.businessAddr {
+  text-align: right;
+  max-width: 48%;
+}
+
+.businessAddr .billedAddr {
+  margin-left: auto;
+}
+
+/* Left meta column + right table (upload layout) */
+.invoiceBodyGrid {
+  display: grid;
+  grid-template-columns: minmax(160px, 200px) 1fr;
+  gap: 28px 32px;
+  align-items: start;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.invoiceMetaCol {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.metaBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metaLabel {
+  font-size: 11px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.metaVal {
+  font-weight: 600;
+  font-size: 14px;
+  color: #111827;
+  margin: 0;
+}
+
+.invoiceTableWrap {
+  min-width: 0;
+}
+
+.itemsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.itemsTable thead {
+  background: #f9fafb;
+}
+
+.itemsTable th {
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.itemsTable th.thQty {
+  text-align: center;
+  width: 56px;
+}
+
+.itemsTable th.thPrice {
+  text-align: right;
+}
+
+.itemsTable td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f3f4f6;
+  color: #111827;
+}
+
+.itemsTable td.tdQty {
+  text-align: center;
+  color: #4b5563;
+}
+
+.itemsTable td.tdPrice {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.totals {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  max-width: 280px;
+  margin-left: auto;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 4px 0;
+  font-size: 13px;
+  color: #374151;
+}
+
+.totalDue {
+  color: #0d9488;
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 6px;
+  padding-top: 8px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.totalDue span {
+  color: #0d9488;
+}
+
+.paymentNote {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.noteCheckbox {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 2px;
+  background: #fff;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.invoiceFooterBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 14px 32px;
+  background: #f3f4f6;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+@media (max-width: 700px) {
+  .invoiceBodyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .totals {
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .invoiceModal {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .invoiceActions {
+    flex-direction: row;
+    padding-top: 0;
+  }
+}
+
+@media print {
+  .overlay {
+    background: #fff;
+    padding: 0;
+    position: static;
+    height: auto;
+  }
+
+  .invoiceActions {
+    display: none;
+  }
+
+  .invoicePaper {
+    box-shadow: none;
+    max-height: none;
+    width: 100%;
+  }
+}

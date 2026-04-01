@@ -1,0 +1,61 @@
+name,price,quantity,thresholdValue,expiryDate,availability
+Maggi,120,10,5,2025-12-12,In-stock
+Bru,250,200,6,2025-12-15,Low stock
+Red Bull,400,24,8,2025-12-18,In-stock
+Bourn Vita,510,500,7,2025-12-20,Out of stock
+Horlicks,530,1,5,2025-12-25,In-stock
+Harpic,180,500,4,2025-01-10,In-stock
+Ariel,450,2,6,2025-01-15,Low stock
+Scotch Brite,90,5,3,2025-01-18,In-stock
+Coca Cola,200,2,10,2025-11-11,Low stock
+Pepsi,210,2,9,2025-11-12,In-stock
+Nestle Milk,320,1,5,2025-12-14,In-stock
+Tata Tea,275,250,6,2025-12-20,Low stock
+Surf Excel,480,1,7,2025-12-25,Out of stock
+Colgate,120,200,4,2025-12-30,In-stock
+Dove Soap,180,4,5,2025-12-28,Low stock
+Lays,20,50,8,2025-10-10,In-stock
+Kelloggs,350,500,6,2025-11-15,In-stock
+Amul Butter,480,500,5,2025-11-18,Low stock
+Cadbury,150,100,7,2025-11-20,In-stock
+Sprite,190,2,8,2025-11-22,In-stock
+Fanta,185,2,9,2025-11-25,Low stock
+Dettol,220,250,4,2025-11-28,In-stock
+Lux,90,3,5,2025-11-30,Out of stock
+Pears,110,3,5,2025-12-02,In-stock
+Vim,60,200,3,2025-12-05,In-stock
+Clinic Plus,140,180,6,2025-12-08,Low stock
+Pantene,160,180,5,2025-12-10,In-stock
+Head & Shoulders,170,180,6,2025-12-12,In-stock
+Closeup,95,150,4,2025-12-15,Out of stock
+Good Day,30,100,7,2025-12-18,In-stock
+Maggi,125,12,5,2026-01-12,In-stock
+Bru,260,250,6,2026-01-15,Low stock
+Red Bull,420,30,8,2026-01-18,In-stock
+Bourn Vita,520,750,7,2026-01-20,Out of stock
+Horlicks,540,1.5,5,2026-01-25,In-stock
+Harpic,190,600,4,2026-02-10,In-stock
+Ariel,460,2.5,6,2026-02-15,Low stock
+Scotch Brite,100,6,3,2026-02-18,In-stock
+Coca Cola,210,2.25,10,2025-12-11,Low stock
+Pepsi,220,2.25,9,2025-12-12,In-stock
+Nestle Milk,330,1.5,5,2026-01-14,In-stock
+Tata Tea,285,300,6,2026-01-20,Low stock
+Surf Excel,500,1.2,7,2026-01-25,Out of stock
+Colgate,130,250,4,2026-01-30,In-stock
+Dove Soap,190,5,5,2026-01-28,Low stock
+Lays,25,60,8,2025-11-10,In-stock
+Kelloggs,360,600,6,2025-12-15,In-stock
+Amul Butter,490,600,5,2025-12-18,Low stock
+Cadbury,160,120,7,2025-12-20,In-stock
+Sprite,200,2.25,8,2025-12-22,In-stock
+Fanta,195,2.25,9,2025-12-25,Low stock
+Dettol,230,300,4,2025-12-28,In-stock
+Lux,100,4,5,2025-12-30,Out of stock
+Pears,120,4,5,2026-01-02,In-stock
+Vim,70,250,3,2026-01-05,In-stock
+Clinic Plus,150,200,6,2026-01-08,Low stock
+Pantene,170,200,5,2026-01-10,In-stock
+Head & Shoulders,180,200,6,2026-01-12,In-stock
+Closeup,100,180,4,2026-01-15,Out of stock
+Good Day,35,120,7,2026-01-18,In-stock
